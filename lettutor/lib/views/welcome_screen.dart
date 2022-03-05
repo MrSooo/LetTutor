@@ -1,8 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:lettutor/views/login_screen.dart';
 
-class welcome_screen extends StatelessWidget {
-  const welcome_screen({Key? key}) : super(key: key);
+class welcomeScene extends StatelessWidget {
+  const welcomeScene({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +77,14 @@ class welcome_screen extends StatelessWidget {
                     primary: Colors.white,
                     textStyle: const TextStyle(fontSize: 20),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => loginScreen(),
+                      ),
+                    );
+                  },
                   icon: const Text('Get Started'),
                   label: const Icon(Icons.arrow_forward),
                 ),
