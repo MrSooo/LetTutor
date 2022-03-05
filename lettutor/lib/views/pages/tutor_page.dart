@@ -235,258 +235,285 @@ class _tutorPageState extends State<tutorPage> {
                     ),
                   ),
                 ),
-                Card(
-                  elevation: 5,
-                  child: Padding(
-                    padding: const EdgeInsets.all(15),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(
-                              child: CircleAvatar(
-                                radius: 30, // Image radius
-                                backgroundImage: NetworkImage('imageUrl'),
+                GestureDetector(
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => tutorDetailPage(),
+                    ),
+                  ),
+                  child: Card(
+                    elevation: 5,
+                    child: Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(
+                                child: CircleAvatar(
+                                  radius: 30, // Image radius
+                                  backgroundImage: NetworkImage('imageUrl'),
+                                ),
                               ),
-                            ),
-                            Expanded(
-                                child: Padding(
-                              padding: const EdgeInsets.only(left: 15.0),
-                              child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    Text("Tutor"),
-                                    SizedBox(height: 8),
-                                    Row(children: [
-                                      Container(
-                                        padding: const EdgeInsets.all(5.0),
-                                        decoration: BoxDecoration(
-                                            color: Colors.blue[50],
-                                            borderRadius:
-                                                BorderRadius.circular(10.0),
-                                            border: Border.all(
-                                                color: Colors.blueAccent)),
-                                        child: Text(
-                                          'English',
-                                          style: TextStyle(fontSize: 10),
-                                        ),
-                                      ),
-                                      SizedBox(width: 5),
-                                      Container(
-                                        padding: const EdgeInsets.all(5.0),
-                                        decoration: BoxDecoration(
-                                            color: Colors.blue[50],
-                                            borderRadius:
-                                                BorderRadius.circular(10.0),
-                                            border: Border.all(
-                                                color: Colors.blueAccent)),
-                                        child: Text(
-                                          'English',
-                                          style: TextStyle(fontSize: 10),
-                                        ),
-                                      ),
-                                    ]),
-                                  ]),
-                            )),
-                            SizedBox(
-                              child: Padding(
-                                  padding: const EdgeInsets.only(right: 5.0),
-                                  child: Row(
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.only(left: 15.0),
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Text('5.0'),
-                                      Icon(
-                                        Icons.star,
-                                        color: Colors.yellow,
-                                        size: 25,
-                                      ),
-                                    ],
-                                  )),
-                            )
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        SizedBox(
-                            width: double.infinity,
-                            child: Flexible(
-                              child: Text(
-                                "propertyModel.propertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddress",
-                                overflow: TextOverflow.ellipsis,
-                                maxLines: 4,
-                              ),
-                            )),
-                      ],
+                                      Text("Tutor"),
+                                      SizedBox(height: 8),
+                                      Row(children: [
+                                        Container(
+                                          padding: const EdgeInsets.all(5.0),
+                                          decoration: BoxDecoration(
+                                              color: Colors.blue[50],
+                                              borderRadius:
+                                                  BorderRadius.circular(10.0),
+                                              border: Border.all(
+                                                  color: Colors.blueAccent)),
+                                          child: Text(
+                                            'English',
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                        ),
+                                        SizedBox(width: 5),
+                                        Container(
+                                          padding: const EdgeInsets.all(5.0),
+                                          decoration: BoxDecoration(
+                                              color: Colors.blue[50],
+                                              borderRadius:
+                                                  BorderRadius.circular(10.0),
+                                              border: Border.all(
+                                                  color: Colors.blueAccent)),
+                                          child: Text(
+                                            'English',
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                        ),
+                                      ]),
+                                    ]),
+                              )),
+                              SizedBox(
+                                child: Padding(
+                                    padding: const EdgeInsets.only(right: 5.0),
+                                    child: Row(
+                                      children: [
+                                        Text('5.0'),
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.yellow,
+                                          size: 25,
+                                        ),
+                                      ],
+                                    )),
+                              )
+                            ],
+                          ),
+                          SizedBox(height: 10),
+                          SizedBox(
+                              width: double.infinity,
+                              child: Flexible(
+                                child: Text(
+                                  "propertyModel.propertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddress",
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 4,
+                                ),
+                              )),
+                        ],
+                      ),
                     ),
                   ),
                 ),
-                Card(
-                  elevation: 5,
-                  child: Padding(
-                    padding: const EdgeInsets.all(15),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(
-                              child: CircleAvatar(
-                                radius: 30, // Image radius
-                                backgroundImage: NetworkImage('imageUrl'),
+                GestureDetector(
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => tutorDetailPage(),
+                    ),
+                  ),
+                  child: Card(
+                    elevation: 5,
+                    child: Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(
+                                child: CircleAvatar(
+                                  radius: 30, // Image radius
+                                  backgroundImage: NetworkImage('imageUrl'),
+                                ),
                               ),
-                            ),
-                            Expanded(
-                                child: Padding(
-                              padding: const EdgeInsets.only(left: 15.0),
-                              child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    Text("Tutor"),
-                                    SizedBox(height: 8),
-                                    Row(children: [
-                                      Container(
-                                        padding: const EdgeInsets.all(5.0),
-                                        decoration: BoxDecoration(
-                                            color: Colors.blue[50],
-                                            borderRadius:
-                                                BorderRadius.circular(10.0),
-                                            border: Border.all(
-                                                color: Colors.blueAccent)),
-                                        child: Text(
-                                          'English',
-                                          style: TextStyle(fontSize: 10),
-                                        ),
-                                      ),
-                                      SizedBox(width: 5),
-                                      Container(
-                                        padding: const EdgeInsets.all(5.0),
-                                        decoration: BoxDecoration(
-                                            color: Colors.blue[50],
-                                            borderRadius:
-                                                BorderRadius.circular(10.0),
-                                            border: Border.all(
-                                                color: Colors.blueAccent)),
-                                        child: Text(
-                                          'English',
-                                          style: TextStyle(fontSize: 10),
-                                        ),
-                                      ),
-                                    ]),
-                                  ]),
-                            )),
-                            SizedBox(
-                              child: Padding(
-                                  padding: const EdgeInsets.only(right: 5.0),
-                                  child: Row(
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.only(left: 15.0),
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Text('5.0'),
-                                      Icon(
-                                        Icons.star,
-                                        color: Colors.yellow,
-                                        size: 25,
-                                      ),
-                                    ],
-                                  )),
-                            )
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        SizedBox(
-                            width: double.infinity,
-                            child: Flexible(
-                              child: Text(
-                                "propertyModel.propertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddress",
-                                overflow: TextOverflow.ellipsis,
-                                maxLines: 4,
-                              ),
-                            )),
-                      ],
+                                      Text("Tutor"),
+                                      SizedBox(height: 8),
+                                      Row(children: [
+                                        Container(
+                                          padding: const EdgeInsets.all(5.0),
+                                          decoration: BoxDecoration(
+                                              color: Colors.blue[50],
+                                              borderRadius:
+                                                  BorderRadius.circular(10.0),
+                                              border: Border.all(
+                                                  color: Colors.blueAccent)),
+                                          child: Text(
+                                            'English',
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                        ),
+                                        SizedBox(width: 5),
+                                        Container(
+                                          padding: const EdgeInsets.all(5.0),
+                                          decoration: BoxDecoration(
+                                              color: Colors.blue[50],
+                                              borderRadius:
+                                                  BorderRadius.circular(10.0),
+                                              border: Border.all(
+                                                  color: Colors.blueAccent)),
+                                          child: Text(
+                                            'English',
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                        ),
+                                      ]),
+                                    ]),
+                              )),
+                              SizedBox(
+                                child: Padding(
+                                    padding: const EdgeInsets.only(right: 5.0),
+                                    child: Row(
+                                      children: [
+                                        Text('5.0'),
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.yellow,
+                                          size: 25,
+                                        ),
+                                      ],
+                                    )),
+                              )
+                            ],
+                          ),
+                          SizedBox(height: 10),
+                          SizedBox(
+                              width: double.infinity,
+                              child: Flexible(
+                                child: Text(
+                                  "propertyModel.propertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddress",
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 4,
+                                ),
+                              )),
+                        ],
+                      ),
                     ),
                   ),
                 ),
-                Card(
-                  elevation: 5,
-                  child: Padding(
-                    padding: const EdgeInsets.all(15),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(
-                              child: CircleAvatar(
-                                radius: 30, // Image radius
-                                backgroundImage: NetworkImage('imageUrl'),
+                GestureDetector(
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => tutorDetailPage(),
+                    ),
+                  ),
+                  child: Card(
+                    elevation: 5,
+                    child: Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(
+                                child: CircleAvatar(
+                                  radius: 30, // Image radius
+                                  backgroundImage: NetworkImage('imageUrl'),
+                                ),
                               ),
-                            ),
-                            Expanded(
-                                child: Padding(
-                              padding: const EdgeInsets.only(left: 15.0),
-                              child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    Text("Tutor"),
-                                    SizedBox(height: 8),
-                                    Row(children: [
-                                      Container(
-                                        padding: const EdgeInsets.all(5.0),
-                                        decoration: BoxDecoration(
-                                            color: Colors.blue[50],
-                                            borderRadius:
-                                                BorderRadius.circular(10.0),
-                                            border: Border.all(
-                                                color: Colors.blueAccent)),
-                                        child: Text(
-                                          'English',
-                                          style: TextStyle(fontSize: 10),
-                                        ),
-                                      ),
-                                      SizedBox(width: 5),
-                                      Container(
-                                        padding: const EdgeInsets.all(5.0),
-                                        decoration: BoxDecoration(
-                                            color: Colors.blue[50],
-                                            borderRadius:
-                                                BorderRadius.circular(10.0),
-                                            border: Border.all(
-                                                color: Colors.blueAccent)),
-                                        child: Text(
-                                          'English',
-                                          style: TextStyle(fontSize: 10),
-                                        ),
-                                      ),
-                                    ]),
-                                  ]),
-                            )),
-                            SizedBox(
-                              child: Padding(
-                                  padding: const EdgeInsets.only(right: 5.0),
-                                  child: Row(
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.only(left: 15.0),
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Text('5.0'),
-                                      Icon(
-                                        Icons.star,
-                                        color: Colors.yellow,
-                                        size: 25,
-                                      ),
-                                    ],
-                                  )),
-                            )
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        SizedBox(
-                            width: double.infinity,
-                            child: Flexible(
-                              child: Text(
-                                "propertyModel.propertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddress",
-                                overflow: TextOverflow.ellipsis,
-                                maxLines: 4,
-                              ),
-                            )),
-                      ],
+                                      Text("Tutor"),
+                                      SizedBox(height: 8),
+                                      Row(children: [
+                                        Container(
+                                          padding: const EdgeInsets.all(5.0),
+                                          decoration: BoxDecoration(
+                                              color: Colors.blue[50],
+                                              borderRadius:
+                                                  BorderRadius.circular(10.0),
+                                              border: Border.all(
+                                                  color: Colors.blueAccent)),
+                                          child: Text(
+                                            'English',
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                        ),
+                                        SizedBox(width: 5),
+                                        Container(
+                                          padding: const EdgeInsets.all(5.0),
+                                          decoration: BoxDecoration(
+                                              color: Colors.blue[50],
+                                              borderRadius:
+                                                  BorderRadius.circular(10.0),
+                                              border: Border.all(
+                                                  color: Colors.blueAccent)),
+                                          child: Text(
+                                            'English',
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                        ),
+                                      ]),
+                                    ]),
+                              )),
+                              SizedBox(
+                                child: Padding(
+                                    padding: const EdgeInsets.only(right: 5.0),
+                                    child: Row(
+                                      children: [
+                                        Text('5.0'),
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.yellow,
+                                          size: 25,
+                                        ),
+                                      ],
+                                    )),
+                              )
+                            ],
+                          ),
+                          SizedBox(height: 10),
+                          SizedBox(
+                              width: double.infinity,
+                              child: Flexible(
+                                child: Text(
+                                  "propertyModel.propertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddress",
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 4,
+                                ),
+                              )),
+                        ],
+                      ),
                     ),
                   ),
                 ),

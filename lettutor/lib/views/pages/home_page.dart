@@ -1,6 +1,7 @@
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:lettutor/views/pages/tutor_details.dart';
 
 class homePage extends StatefulWidget {
   const homePage({Key? key}) : super(key: key);
@@ -102,282 +103,315 @@ class _homePageState extends State<homePage> {
               physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               children: [
-                Card(
-                  elevation: 5,
-                  child: Padding(
-                    padding: const EdgeInsets.all(15),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(
-                              child: CircleAvatar(
-                                radius: 30, // Image radius
-                                backgroundImage: NetworkImage('imageUrl'),
-                              ),
-                            ),
-                            Expanded(
-                                child: Padding(
-                              padding: const EdgeInsets.only(left: 15.0),
-                              child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    Text("Tutor"),
-                                    SizedBox(height: 8),
-                                    Row(
-                                      children: [
-                                        Icon(
-                                          Icons.star,
-                                          color: Colors.yellow,
-                                          size: 20,
-                                        ),
-                                        Icon(
-                                          Icons.star,
-                                          color: Colors.yellow,
-                                          size: 20,
-                                        ),
-                                        Icon(
-                                          Icons.star,
-                                          color: Colors.yellow,
-                                          size: 20,
-                                        ),
-                                        Icon(
-                                          Icons.star,
-                                          color: Colors.yellow,
-                                          size: 20,
-                                        ),
-                                        Icon(
-                                          Icons.star_outline,
-                                          color: Colors.yellow,
-                                          size: 20,
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 8),
-                                    Container(
-                                      padding: const EdgeInsets.all(5.0),
-                                      decoration: BoxDecoration(
-                                          color: Colors.blue[50],
-                                          borderRadius:
-                                              BorderRadius.circular(10.0),
-                                          border: Border.all(
-                                              color: Colors.blueAccent)),
-                                      child: Text(
-                                        'English',
-                                        style: TextStyle(fontSize: 10),
-                                      ),
-                                    )
-                                  ]),
-                            )),
-                            SizedBox(
-                              child: Padding(
-                                padding: const EdgeInsets.only(right: 5.0),
-                                child: FavoriteButton(
-                                  valueChanged: (_) {},
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => tutorDetailPage(),
+                      ),
+                    );
+                  },
+                  child: Card(
+                    elevation: 5,
+                    child: Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(
+                                child: CircleAvatar(
+                                  radius: 30, // Image radius
+                                  backgroundImage: NetworkImage('imageUrl'),
                                 ),
                               ),
-                            )
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        SizedBox(
-                            width: double.infinity,
-                            child: Flexible(
-                              child: Text(
-                                "propertyModel.propertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddress",
-                                overflow: TextOverflow.ellipsis,
-                                maxLines: 4,
-                              ),
-                            )),
-                      ],
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.only(left: 15.0),
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text("Tutor"),
+                                      SizedBox(height: 8),
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.star,
+                                            color: Colors.yellow,
+                                            size: 20,
+                                          ),
+                                          Icon(
+                                            Icons.star,
+                                            color: Colors.yellow,
+                                            size: 20,
+                                          ),
+                                          Icon(
+                                            Icons.star,
+                                            color: Colors.yellow,
+                                            size: 20,
+                                          ),
+                                          Icon(
+                                            Icons.star,
+                                            color: Colors.yellow,
+                                            size: 20,
+                                          ),
+                                          Icon(
+                                            Icons.star_outline,
+                                            color: Colors.yellow,
+                                            size: 20,
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(height: 8),
+                                      Container(
+                                        padding: const EdgeInsets.all(5.0),
+                                        decoration: BoxDecoration(
+                                            color: Colors.blue[50],
+                                            borderRadius:
+                                                BorderRadius.circular(10.0),
+                                            border: Border.all(
+                                                color: Colors.blueAccent)),
+                                        child: Text(
+                                          'English',
+                                          style: TextStyle(fontSize: 10),
+                                        ),
+                                      )
+                                    ]),
+                              )),
+                              SizedBox(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(right: 5.0),
+                                  child: FavoriteButton(
+                                    valueChanged: (_) {},
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                          SizedBox(height: 10),
+                          SizedBox(
+                              width: double.infinity,
+                              child: Flexible(
+                                child: Text(
+                                  "propertyModel.propertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddress",
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 4,
+                                ),
+                              )),
+                        ],
+                      ),
                     ),
                   ),
                 ),
-                Card(
-                  elevation: 5,
-                  child: Padding(
-                    padding: const EdgeInsets.all(15),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(
-                              child: CircleAvatar(
-                                radius: 30, // Image radius
-                                backgroundImage: NetworkImage('imageUrl'),
-                              ),
-                            ),
-                            Expanded(
-                                child: Padding(
-                              padding: const EdgeInsets.only(left: 15.0),
-                              child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    Text("Tutor"),
-                                    SizedBox(height: 8),
-                                    Row(
-                                      children: [
-                                        Icon(
-                                          Icons.star,
-                                          color: Colors.yellow,
-                                          size: 20,
-                                        ),
-                                        Icon(
-                                          Icons.star,
-                                          color: Colors.yellow,
-                                          size: 20,
-                                        ),
-                                        Icon(
-                                          Icons.star,
-                                          color: Colors.yellow,
-                                          size: 20,
-                                        ),
-                                        Icon(
-                                          Icons.star,
-                                          color: Colors.yellow,
-                                          size: 20,
-                                        ),
-                                        Icon(
-                                          Icons.star_outline,
-                                          color: Colors.yellow,
-                                          size: 20,
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 8),
-                                    Container(
-                                      padding: const EdgeInsets.all(5.0),
-                                      decoration: BoxDecoration(
-                                          color: Colors.blue[50],
-                                          borderRadius:
-                                              BorderRadius.circular(10.0),
-                                          border: Border.all(
-                                              color: Colors.blueAccent)),
-                                      child: Text(
-                                        'English',
-                                        style: TextStyle(fontSize: 10),
-                                      ),
-                                    )
-                                  ]),
-                            )),
-                            SizedBox(
-                              child: Padding(
-                                padding: const EdgeInsets.only(right: 5.0),
-                                child: FavoriteButton(
-                                  valueChanged: (_) {},
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => tutorDetailPage(),
+                      ),
+                    );
+                  },
+                  child: Card(
+                    elevation: 5,
+                    child: Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(
+                                child: CircleAvatar(
+                                  radius: 30, // Image radius
+                                  backgroundImage: NetworkImage('imageUrl'),
                                 ),
                               ),
-                            )
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        SizedBox(
-                            width: double.infinity,
-                            child: Flexible(
-                              child: Text(
-                                "propertyModel.propertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddress",
-                                overflow: TextOverflow.ellipsis,
-                                maxLines: 4,
-                              ),
-                            )),
-                      ],
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.only(left: 15.0),
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text("Tutor"),
+                                      SizedBox(height: 8),
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.star,
+                                            color: Colors.yellow,
+                                            size: 20,
+                                          ),
+                                          Icon(
+                                            Icons.star,
+                                            color: Colors.yellow,
+                                            size: 20,
+                                          ),
+                                          Icon(
+                                            Icons.star,
+                                            color: Colors.yellow,
+                                            size: 20,
+                                          ),
+                                          Icon(
+                                            Icons.star,
+                                            color: Colors.yellow,
+                                            size: 20,
+                                          ),
+                                          Icon(
+                                            Icons.star_outline,
+                                            color: Colors.yellow,
+                                            size: 20,
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(height: 8),
+                                      Container(
+                                        padding: const EdgeInsets.all(5.0),
+                                        decoration: BoxDecoration(
+                                            color: Colors.blue[50],
+                                            borderRadius:
+                                                BorderRadius.circular(10.0),
+                                            border: Border.all(
+                                                color: Colors.blueAccent)),
+                                        child: Text(
+                                          'English',
+                                          style: TextStyle(fontSize: 10),
+                                        ),
+                                      )
+                                    ]),
+                              )),
+                              SizedBox(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(right: 5.0),
+                                  child: FavoriteButton(
+                                    valueChanged: (_) {},
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                          SizedBox(height: 10),
+                          SizedBox(
+                              width: double.infinity,
+                              child: Flexible(
+                                child: Text(
+                                  "propertyModel.propertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddress",
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 4,
+                                ),
+                              )),
+                        ],
+                      ),
                     ),
                   ),
                 ),
-                Card(
-                  elevation: 5,
-                  child: Padding(
-                    padding: const EdgeInsets.all(15),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(
-                              child: CircleAvatar(
-                                radius: 30, // Image radius
-                                backgroundImage: NetworkImage('imageUrl'),
-                              ),
-                            ),
-                            Expanded(
-                                child: Padding(
-                              padding: const EdgeInsets.only(left: 15.0),
-                              child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    Text("Tutor"),
-                                    SizedBox(height: 8),
-                                    Row(
-                                      children: [
-                                        Icon(
-                                          Icons.star,
-                                          color: Colors.yellow,
-                                          size: 20,
-                                        ),
-                                        Icon(
-                                          Icons.star,
-                                          color: Colors.yellow,
-                                          size: 20,
-                                        ),
-                                        Icon(
-                                          Icons.star,
-                                          color: Colors.yellow,
-                                          size: 20,
-                                        ),
-                                        Icon(
-                                          Icons.star,
-                                          color: Colors.yellow,
-                                          size: 20,
-                                        ),
-                                        Icon(
-                                          Icons.star_outline,
-                                          color: Colors.yellow,
-                                          size: 20,
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 8),
-                                    Container(
-                                      padding: const EdgeInsets.all(5.0),
-                                      decoration: BoxDecoration(
-                                          color: Colors.blue[50],
-                                          borderRadius:
-                                              BorderRadius.circular(10.0),
-                                          border: Border.all(
-                                              color: Colors.blueAccent)),
-                                      child: Text(
-                                        'English',
-                                        style: TextStyle(fontSize: 10),
-                                      ),
-                                    )
-                                  ]),
-                            )),
-                            SizedBox(
-                              child: Padding(
-                                padding: const EdgeInsets.only(right: 5.0),
-                                child: FavoriteButton(
-                                  valueChanged: (_) {},
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => tutorDetailPage(),
+                      ),
+                    );
+                  },
+                  child: Card(
+                    elevation: 5,
+                    child: Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(
+                                child: CircleAvatar(
+                                  radius: 30, // Image radius
+                                  backgroundImage: NetworkImage('imageUrl'),
                                 ),
                               ),
-                            )
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        SizedBox(
-                            width: double.infinity,
-                            child: Flexible(
-                              child: Text(
-                                "propertyModel.propertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddress",
-                                overflow: TextOverflow.ellipsis,
-                                maxLines: 4,
-                              ),
-                            )),
-                      ],
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.only(left: 15.0),
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text("Tutor"),
+                                      SizedBox(height: 8),
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.star,
+                                            color: Colors.yellow,
+                                            size: 20,
+                                          ),
+                                          Icon(
+                                            Icons.star,
+                                            color: Colors.yellow,
+                                            size: 20,
+                                          ),
+                                          Icon(
+                                            Icons.star,
+                                            color: Colors.yellow,
+                                            size: 20,
+                                          ),
+                                          Icon(
+                                            Icons.star,
+                                            color: Colors.yellow,
+                                            size: 20,
+                                          ),
+                                          Icon(
+                                            Icons.star_outline,
+                                            color: Colors.yellow,
+                                            size: 20,
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(height: 8),
+                                      Container(
+                                        padding: const EdgeInsets.all(5.0),
+                                        decoration: BoxDecoration(
+                                            color: Colors.blue[50],
+                                            borderRadius:
+                                                BorderRadius.circular(10.0),
+                                            border: Border.all(
+                                                color: Colors.blueAccent)),
+                                        child: Text(
+                                          'English',
+                                          style: TextStyle(fontSize: 10),
+                                        ),
+                                      )
+                                    ]),
+                              )),
+                              SizedBox(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(right: 5.0),
+                                  child: FavoriteButton(
+                                    valueChanged: (_) {},
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                          SizedBox(height: 10),
+                          SizedBox(
+                              width: double.infinity,
+                              child: Flexible(
+                                child: Text(
+                                  "propertyModel.propertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddresspropertyAddress",
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 4,
+                                ),
+                              )),
+                        ],
+                      ),
                     ),
                   ),
                 ),
